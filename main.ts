@@ -1,10 +1,27 @@
 let currentOption = 1;
+let menuSprites: Sprite[] = [];
 
 game.splash("Raptor Run");
 
 // Function to show the main menu
 function showMainMenu() {
-    game.showLongText("1. Start Game\n2. Instructions\n3. Exit", DialogLayout.Center);
+    // Clear previous menu sprites
+    menuSprites.forEach(sprite => sprite.destroy());
+    menuSprites = [];
+
+    // Display menu options
+    for (let i = 1; i <= 3; i++) {
+        let menuText = `${i}. `;
+        if (i == currentOption) {
+            // Highlight the selected option
+            menuText = "> " + menuText;
+        }
+        let menuSprite = textsprite.create(menuText);
+        menuSprite.setOutline(1, 15);
+        menuSprite.setFlag(SpriteFlag.RelativeToCamera, true);
+        menuSprite.top = 30 + (i - 1) * 20;
+        menuSprites.push(menuSprite);
+    }
 }
 
 // Show the main menu initially
@@ -46,10 +63,7 @@ function handleMenuOption(option: number) {
     if (option == 1) {
         // Start Game
         game.reset();
-        //initGround();
-        //initRaptor();
         info.setScore(0);
-        //end = 0;
         game.showLongText("Game Started!", DialogLayout.Top);
     } else if (option == 2) {
         // Instructions
