@@ -3,7 +3,20 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "animation": "*"
+        "animation": "*",
+        "sprite-scaling": "*",
+        "sevenseg": "*",
+        "color-coded-tilemap": "*",
+        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.3",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
+        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#6cfbf925b9a4d5ddf3e1078e6cf6ca6a1aebb301",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.1.0"
     },
     "files": [
         "main.ts",
@@ -14,7 +27,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.46",
+        "target": "1.13.55",
         "targetId": "arcade"
     },
     "supportedTargets": [
